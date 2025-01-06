@@ -1,0 +1,78 @@
+\documentclass[12pt, titlepage, a4paper]{scrartcl}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[a4paper,
+    lmargin={2.8cm},
+    rmargin={2.8cm},
+    tmargin={2.5cm},
+    bmargin={2.5cm},
+    lines={45},
+    headsep=\baselineskip,
+    footskip=\baselineskip]{geometry}
+\usepackage{graphicx}
+\usepackage{scrlayer-scrpage}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{helvet}
+\usepackage{wrapfig}
+\usepackage[numbers]{natbib}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{acronym}
+
+
+\setlength{\footskip}{10mm}
+
+% Kopf- und Fußzeile
+\chead{Interaktive Systeme Seminararbeit}
+\cofoot{Luis Bros}
+\rofoot{Seite \pagemark}
+\lofoot{\today}
+
+\KOMAoptions{
+   headsepline = true,
+   footsepline = true,
+   plainfootsepline = true,
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip}
+
+% PDF Einstellungen
+\hypersetup{
+    pdftitle={Interaktive Systeme Seminararbeit},
+    pdfauthor={Luis Bros},
+    pdfpagemode=FullScreen,
+}
+
+\captionsetup{font={sf}}
+
+\begin{document}
+
+\input{structure/title.tex}
+\newpage
+
+% \input{structure/sperrvermerk.tex}
+% \thispagestyle{empty}
+% \newpage
+
+\input{structure/erklaerung.tex}
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+\setcounter{page}{1}
+
+\input{chapters/00_einleitung/00_Einleitung.tex}
+\input{chapters/01_personas/00_Personas.tex}
+\input{chapters/02_evulation/00_Evulation.tex}
+\input{chapters/03_Fazit/00_Fazit.tex}
+
+\end{document}
